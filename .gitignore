@@ -3,6 +3,7 @@
 **/dist/
 **/nbproject/private/
 *.class
+*.log
 
 # Arquivos do sistema e de editores
 .DS_Store

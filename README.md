@@ -2,6 +2,8 @@
 
 Coleção de cinco exercícios desenvolvidos em Java utilizando interfaces, encapsulamento e organização em pacotes. Os projetos foram criados para o Apache NetBeans.
 
+Cada exercício possui sua própria documentação e pode ser aberto separadamente no NetBeans.
+
 ## Projetos
 
 - **E1 — Dispositivos Eletrônicos:** dispositivos que podem ser ligados e desligados.
