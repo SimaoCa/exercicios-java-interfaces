@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <marker id="triangle" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M12,7 L1,1 L1,13 Z" fill="white" stroke="#334155" stroke-width="1.5"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial; fill: #0f172a; }
+      .package { font: 700 16px Arial; fill: #475569; }
+      .name { font: 700 18px Arial; fill: #ffffff; }
+      .stereo { font: italic 15px Arial; fill: #dcfce7; }
+      .line { font: 14px Consolas, monospace; fill: #0f172a; }
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2; }
+      .head { fill: #15803d; }
+      .relation { fill: none; stroke: #334155; stroke-width: 2.5; stroke-dasharray: 9 6; marker-end: url(#triangle); }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="46" text-anchor="middle" class="title">Exercício 4 — Sistema de Notificações</text>
+
+  <rect x="560" y="85" width="480" height="190" rx="8" class="box"/>
+  <rect x="560" y="85" width="480" height="62" rx="8" class="head"/>
+  <rect x="560" y="137" width="480" height="10" class="head"/>
+  <text x="800" y="111" text-anchor="middle" class="stereo">&lt;&lt;interface&gt;&gt;</text>
+  <text x="800" y="137" text-anchor="middle" class="name">Notificacao</text>
+  <line x1="560" y1="147" x2="1040" y2="147" stroke="#334155" stroke-width="2"/>
+  <text x="580" y="177" class="line">+ canalDeComunicacao(): void</text>
+  <text x="580" y="210" class="line">+ perfilDeCliente(): void</text>
+  <text x="580" y="243" class="line">+ enviarMensagem(): void</text>
+  <text x="572" y="78" class="package">pacote interfaces</text>
+
+  <path d="M270 365 L270 320 L690 320 L690 275" class="relation"/>
+  <path d="M800 365 L800 275" class="relation"/>
+  <path d="M1330 365 L1330 320 L910 320 L910 275" class="relation"/>
+
+  <g transform="translate(30 365)">
+    <rect width="480" height="430" rx="8" class="box"/>
+    <rect width="480" height="56" rx="8" class="head"/><rect y="46" width="480" height="10" class="head"/>
+    <text x="240" y="36" text-anchor="middle" class="name">NotificacaoEmail</text>
+    <line y1="56" x2="480" y2="56" stroke="#334155" stroke-width="2"/>
+    <text x="20" y="91" class="line">- destinatario: String</text>
+    <text x="20" y="123" class="line">- perfilCliente: String</text>
+    <text x="20" y="155" class="line">- mensagem: String</text>
+    <text x="20" y="187" class="line">- enviado: boolean</text>
+    <line y1="207" x2="480" y2="207" stroke="#334155" stroke-width="2"/>
+    <text x="20" y="240" class="line">+ getters e setters</text>
+    <text x="20" y="276" class="line">+ canalDeComunicacao(): void</text>
+    <text x="20" y="312" class="line">+ perfilDeCliente(): void</text>
+    <text x="20" y="348" class="line">+ enviarMensagem(): void</text>
+    <text x="20" y="397" class="line">Envio próprio por e-mail</text>
+  </g>
+  <g transform="translate(560 365)">
+    <rect width="480" height="430" rx="8" class="box"/>
+    <rect width="480" height="56" rx="8" class="head"/><rect y="46" width="480" height="10" class="head"/>
+    <text x="240" y="36" text-anchor="middle" class="name">NotificacaoSms</text>
+    <line y1="56" x2="480" y2="56" stroke="#334155" stroke-width="2"/>
+    <text x="20" y="91" class="line">- destinatario: String</text>
+    <text x="20" y="123" class="line">- perfilCliente: String</text>
+    <text x="20" y="155" class="line">- mensagem: String</text>
+    <text x="20" y="187" class="line">- enviado: boolean</text>
+    <line y1="207" x2="480" y2="207" stroke="#334155" stroke-width="2"/>
+    <text x="20" y="240" class="line">+ getters e setters</text>
+    <text x="20" y="276" class="line">+ canalDeComunicacao(): void</text>
+    <text x="20" y="312" class="line">+ perfilDeCliente(): void</text>
+    <text x="20" y="348" class="line">+ enviarMensagem(): void</text>
+    <text x="20" y="397" class="line">Envio próprio por SMS</text>
+  </g>
+  <g transform="translate(1090 365)">
+    <rect width="480" height="430" rx="8" class="box"/>
+    <rect width="480" height="56" rx="8" class="head"/><rect y="46" width="480" height="10" class="head"/>
+    <text x="240" y="36" text-anchor="middle" class="name">NotificacaoWhatsapp</text>
+    <line y1="56" x2="480" y2="56" stroke="#334155" stroke-width="2"/>
+    <text x="20" y="91" class="line">- destinatario: String</text>
+    <text x="20" y="123" class="line">- perfilCliente: String</text>
+    <text x="20" y="155" class="line">- mensagem: String</text>
+    <text x="20" y="187" class="line">- enviado: boolean</text>
+    <line y1="207" x2="480" y2="207" stroke="#334155" stroke-width="2"/>
+    <text x="20" y="240" class="line">+ getters e setters</text>
+    <text x="20" y="276" class="line">+ canalDeComunicacao(): void</text>
+    <text x="20" y="312" class="line">+ perfilDeCliente(): void</text>
+    <text x="20" y="348" class="line">+ enviarMensagem(): void</text>
+    <text x="20" y="397" class="line">Envio próprio por WhatsApp</text>
+  </g>
+  <text x="42" y="830" class="package">pacote notificacoes</text>
+</svg>

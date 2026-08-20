@@ -1,0 +1,53 @@
+@startuml
+title Exercício 3 - Sistema de Funcionários
+skinparam classAttributeIconSize 0
+
+package interfaces {
+    interface RegistroFuncionario {
+        + selecionarFuncao(): void
+        + baterPontoEntrada(): void
+        + baterPontoSaida(): void
+    }
+}
+
+package funcionarios {
+    class FuncionarioPresencial {
+        - funcionario: String
+        - funcao: String
+        - entrada: double
+        - saida: double
+        + getFuncionario(): String
+        + setFuncionario(funcionario: String): void
+        + getFuncao(): String
+        + setFuncao(funcao: String): void
+        + getEntrada(): double
+        + setEntrada(entrada: double): void
+        + getSaida(): double
+        + setSaida(saida: double): void
+        + selecionarFuncao(): void
+        + baterPontoEntrada(): void
+        + baterPontoSaida(): void
+    }
+
+    class FuncionarioRemoto {
+        - funcionario: String
+        - funcao: String
+        - entrada: double
+        - saida: double
+        + getFuncionario(): String
+        + setFuncionario(funcionario: String): void
+        + getFuncao(): String
+        + setFuncao(funcao: String): void
+        + getEntrada(): double
+        + setEntrada(entrada: double): void
+        + getSaida(): double
+        + setSaida(saida: double): void
+        + selecionarFuncao(): void
+        + baterPontoEntrada(): void
+        + baterPontoSaida(): void
+    }
+}
+
+RegistroFuncionario <|.. FuncionarioPresencial
+RegistroFuncionario <|.. FuncionarioRemoto
+@enduml

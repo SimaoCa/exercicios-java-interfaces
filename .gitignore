@@ -1,0 +1,11 @@
+# Arquivos gerados pelo NetBeans e pela compilação
+**/build/
+**/dist/
+**/nbproject/private/
+*.class
+
+# Arquivos do sistema e de editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

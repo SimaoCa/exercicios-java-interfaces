@@ -1,0 +1,52 @@
+@startuml
+title Exercicio 2 - Sistema de Pagamentos
+
+package interfaces {
+  interface Pagamento {
+    + realizarPagamento(): void
+    + cancelarPagamento(): void
+  }
+}
+
+package formas {
+  class PagamentoPix {
+    - valor: double
+    - chavePix: String
+    - realizado: boolean
+    + getValor(): double
+    + setValor(valor: double): void
+    + getChavePix(): String
+    + setChavePix(chavePix: String): void
+    + getRealizado(): boolean
+    + realizarPagamento(): void
+    + cancelarPagamento(): void
+  }
+
+  class PagamentoCartao {
+    - valor: double
+    - numeroCartao: String
+    - nomeTitular: String
+    - realizado: boolean
+    + getValor(): double
+    + setValor(valor: double): void
+    + getNumeroCartao(): String
+    + setNumeroCartao(numeroCartao: String): void
+    + getNomeTitular(): String
+    + setNomeTitular(nomeTitular: String): void
+    + getRealizado(): boolean
+    + realizarPagamento(): void
+    + cancelarPagamento(): void
+  }
+}
+
+package principal {
+  class Main {
+    + main(args: String[]): void
+  }
+}
+
+Pagamento <|.. PagamentoPix
+Pagamento <|.. PagamentoCartao
+Main ..> PagamentoPix : cria e testa
+Main ..> PagamentoCartao : cria e testa
+@enduml

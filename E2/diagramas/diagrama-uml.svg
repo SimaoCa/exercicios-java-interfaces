@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #263238; stroke-width: 2; }
+      .interface { fill: #e3f2fd; }
+      .class { fill: #f8fafc; }
+      .main { fill: #fff8e1; }
+      .title { font: bold 21px Arial, sans-serif; fill: #102027; text-anchor: middle; }
+      .stereotype { font: italic 16px Arial, sans-serif; fill: #455a64; text-anchor: middle; }
+      .member { font: 16px Consolas, monospace; fill: #263238; }
+      .caption { font: bold 28px Arial, sans-serif; fill: #102027; text-anchor: middle; }
+      .relation { fill: none; stroke: #37474f; stroke-width: 2.5; stroke-dasharray: 9 7; }
+      .label { font: 15px Arial, sans-serif; fill: #37474f; }
+    </style>
+    <marker id="triangle" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M 12 7 L 1 1 L 1 13 Z" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+    </marker>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 1 1 L 10 6 L 1 11" fill="none" stroke="#37474f" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="900" fill="#eef2f5"/>
+  <text x="700" y="45" class="caption">Exercício 2 — Sistema de Pagamentos</text>
+
+  <rect x="480" y="80" width="440" height="145" rx="6" class="box interface"/>
+  <text x="700" y="112" class="stereotype">&lt;&lt;interface&gt;&gt;</text>
+  <text x="700" y="140" class="title">interfaces.Pagamento</text>
+  <line x1="480" y1="155" x2="920" y2="155" stroke="#263238" stroke-width="2"/>
+  <text x="500" y="184" class="member">+ realizarPagamento(): void</text>
+  <text x="500" y="211" class="member">+ cancelarPagamento(): void</text>
+
+  <rect x="55" y="330" width="590" height="450" rx="6" class="box class"/>
+  <text x="350" y="365" class="title">formas.PagamentoPix</text>
+  <line x1="55" y1="382" x2="645" y2="382" stroke="#263238" stroke-width="2"/>
+  <text x="78" y="412" class="member">- valor: double</text>
+  <text x="78" y="439" class="member">- chavePix: String</text>
+  <text x="78" y="466" class="member">- realizado: boolean</text>
+  <line x1="55" y1="484" x2="645" y2="484" stroke="#263238" stroke-width="2"/>
+  <text x="78" y="514" class="member">+ getValor(): double</text>
+  <text x="78" y="541" class="member">+ setValor(valor: double): void</text>
+  <text x="78" y="568" class="member">+ getChavePix(): String</text>
+  <text x="78" y="595" class="member">+ setChavePix(chavePix: String): void</text>
+  <text x="78" y="622" class="member">+ getRealizado(): boolean</text>
+  <text x="78" y="649" class="member">+ realizarPagamento(): void</text>
+  <text x="78" y="676" class="member">+ cancelarPagamento(): void</text>
+
+  <rect x="755" y="330" width="590" height="450" rx="6" class="box class"/>
+  <text x="1050" y="365" class="title">formas.PagamentoCartao</text>
+  <line x1="755" y1="382" x2="1345" y2="382" stroke="#263238" stroke-width="2"/>
+  <text x="778" y="412" class="member">- valor: double</text>
+  <text x="778" y="439" class="member">- numeroCartao: String</text>
+  <text x="778" y="466" class="member">- nomeTitular: String</text>
+  <text x="778" y="493" class="member">- realizado: boolean</text>
+  <line x1="755" y1="511" x2="1345" y2="511" stroke="#263238" stroke-width="2"/>
+  <text x="778" y="541" class="member">+ getValor(): double</text>
+  <text x="778" y="568" class="member">+ setValor(valor: double): void</text>
+  <text x="778" y="595" class="member">+ getNumeroCartao(): String</text>
+  <text x="778" y="622" class="member">+ setNumeroCartao(numeroCartao: String): void</text>
+  <text x="778" y="649" class="member">+ getNomeTitular(): String</text>
+  <text x="778" y="676" class="member">+ setNomeTitular(nomeTitular: String): void</text>
+  <text x="778" y="703" class="member">+ getRealizado(): boolean</text>
+  <text x="778" y="730" class="member">+ realizarPagamento(): void</text>
+  <text x="778" y="757" class="member">+ cancelarPagamento(): void</text>
+
+  <path d="M 350 330 C 350 275, 560 275, 620 225" class="relation" marker-end="url(#triangle)"/>
+  <path d="M 1050 330 C 1050 275, 840 275, 780 225" class="relation" marker-end="url(#triangle)"/>
+
+  <rect x="500" y="810" width="400" height="70" rx="6" class="box main"/>
+  <text x="700" y="840" class="title">principal.Main</text>
+  <line x1="500" y1="850" x2="900" y2="850" stroke="#263238" stroke-width="2"/>
+  <text x="520" y="873" class="member">+ main(args: String[]): void</text>
+
+  <path d="M 500 845 C 430 835, 370 820, 350 780" class="relation" marker-end="url(#arrow)"/>
+  <path d="M 900 845 C 970 835, 1030 820, 1050 780" class="relation" marker-end="url(#arrow)"/>
+  <text x="380" y="828" class="label">cria e testa</text>
+  <text x="930" y="828" class="label">cria e testa</text>
+</svg>

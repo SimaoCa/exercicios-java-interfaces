@@ -1,0 +1,51 @@
+@startuml
+title Exercício 4 - Sistema de Notificações
+skinparam classAttributeIconSize 0
+
+package interfaces {
+    interface Notificacao {
+        + canalDeComunicacao(): void
+        + perfilDeCliente(): void
+        + enviarMensagem(): void
+    }
+}
+
+package notificacoes {
+    class NotificacaoEmail {
+        - destinatario: String
+        - perfilCliente: String
+        - mensagem: String
+        - enviado: boolean
+        + getters e setters
+        + canalDeComunicacao(): void
+        + perfilDeCliente(): void
+        + enviarMensagem(): void
+    }
+
+    class NotificacaoSms {
+        - destinatario: String
+        - perfilCliente: String
+        - mensagem: String
+        - enviado: boolean
+        + getters e setters
+        + canalDeComunicacao(): void
+        + perfilDeCliente(): void
+        + enviarMensagem(): void
+    }
+
+    class NotificacaoWhatsapp {
+        - destinatario: String
+        - perfilCliente: String
+        - mensagem: String
+        - enviado: boolean
+        + getters e setters
+        + canalDeComunicacao(): void
+        + perfilDeCliente(): void
+        + enviarMensagem(): void
+    }
+}
+
+Notificacao <|.. NotificacaoEmail
+Notificacao <|.. NotificacaoSms
+Notificacao <|.. NotificacaoWhatsapp
+@enduml

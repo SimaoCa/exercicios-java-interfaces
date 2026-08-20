@@ -1,0 +1,54 @@
+@startuml
+title Exercício 5 - Sistema de Controle de Mídia
+skinparam classAttributeIconSize 0
+
+package interfaces {
+    interface ControleMidia {
+        + buscarDispositivo(): void
+        + mostrarMidiaEmReproducao(): void
+        + mostrarMidiaGeral(): void
+    }
+}
+
+package dispositivos {
+    class Televisao {
+        - ligado: boolean
+        - volume: int
+        - nomeDispositivo: String
+        - midiaAReproduzir: String
+        - midiaNaFila: int
+        + getters e setters
+        + buscarDispositivo(): void
+        + mostrarMidiaEmReproducao(): void
+        + mostrarMidiaGeral(): void
+    }
+
+    class AparelhoSom {
+        - ligado: boolean
+        - volume: int
+        - nomeDispositivo: String
+        - midiaAReproduzir: String
+        - midiaNaFila: int
+        + getters e setters
+        + buscarDispositivo(): void
+        + mostrarMidiaEmReproducao(): void
+        + mostrarMidiaGeral(): void
+    }
+
+    class Computador {
+        - ligado: boolean
+        - volume: int
+        - nomeDispositivo: String
+        - midiaAReproduzir: String
+        - midiaNaFila: int
+        + getters e setters
+        + buscarDispositivo(): void
+        + mostrarMidiaEmReproducao(): void
+        + mostrarMidiaGeral(): void
+    }
+}
+
+ControleMidia <|.. Televisao
+ControleMidia <|.. AparelhoSom
+ControleMidia <|.. Computador
+@enduml
